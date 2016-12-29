@@ -18,7 +18,7 @@
 
 # Define all your cluster nodes, MASTER node comes first"
 # And separated with blank space like <user_1@ip_1> <user_2@ip_2> <user_3@ip_3>
-export nodes=${nodes:-"vcap@10.10.103.250 vcap@10.10.103.162 vcap@10.10.103.223"}
+export nodes=${nodes:-"noah@192.168.5.135 noah@192.168.5.134 noah@192.168.5.136"}
 
 # Define all your nodes role: a(master) or i(minion) or ai(both master and minion),
 # Roles must be the same order with the nodes.
@@ -116,6 +116,7 @@ ENABLE_CLUSTER_DNS="${KUBE_ENABLE_CLUSTER_DNS:-true}"
 # DNS_SERVER_IP must be a IP in SERVICE_CLUSTER_IP_RANGE
 DNS_SERVER_IP=${DNS_SERVER_IP:-"192.168.3.10"}
 DNS_DOMAIN=${DNS_DOMAIN:-"cluster.local"}
+DNS_REPLICAS=1
 
 # Optional: Enable DNS horizontal autoscaler
 ENABLE_DNS_HORIZONTAL_AUTOSCALER="${KUBE_ENABLE_DNS_HORIZONTAL_AUTOSCALER:-false}"
